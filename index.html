@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div class = "navbar-inner">
+            <span class="brand">📋 Layanan Mahasiswa</span>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Form Input</a>
+                <a href="table.html">Data Layanan</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+    <section class="card">
+      <h1>Formulir Permintaan Layanan</h1>
+      <p class="subtitle">Isi data di bawah ini untuk mengajukan permintaan layanan.</p>
+
+      <form id="formLayanan" novalidate>
+        <div class="form-group">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Contoh: Lin Wijaya" required />
+          <span class="error-msg" id="err-nama"></span>
+        </div>
+
+        <div>
+            <label for="jenisLayanan ">Jenis Layanan</label>
+            <select id="jenisLayanan" name = "jenisLayanan" required>
+                <option value="" disabled selected>-- Pilih Jenis Layanan --</option>
+                <option value="Surat Keterangan Aktif Kuliah">Surat Keterangan Aktif Kuliah</option>
+                <option value="Legalisir Ijazah/Transkrip">Legalisir Ijazah/Transkrip</option>
+                <option value="Pengajuan Cuti Akademik">Pengajuan Cuti Akademik</option>
+                <option value="Bebas Perpustakaan">Bebas Perpustakaan</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+            <span class="error-msg" id="err-jenisLayanan"></span>
+        </div>
+
+        <div class=""form-group>
+            <label for = "keterangan">Keterangan</label>
+            <textarea id="keterangan" name="keterangan" rows="4" placeholder="Tuliskan detail permintaan Anda..." required></textarea>
+            <span class="error-msg" id="err-keterangan"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Simpan Data</button>
+          <button type="reset" class="btn-secondary">Bersihkan</button>
+        </div>
+      </form>
+
+      <p id="successMsg" class="success-msg"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Sistem Layanan Mahasiswa — Tugas Kuliah</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
