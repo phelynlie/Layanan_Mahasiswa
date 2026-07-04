@@ -14,7 +14,7 @@ const formLayanan = document.getElementById("formLayanan");
 if(formLayanan) {
     const successMsg = document.getElementById("successMsg");
 
-    formLayanan.addEventListener("Submit", function (e) {
+    formLayanan.addEventListener("submit", function (e) {
         e.preventDefault();
 
         const nama = document.getElementById("nama").value.trim();
@@ -47,7 +47,7 @@ if(formLayanan) {
         }
 
         if (keterangan === "") {
-      document.getElementById("err-keterangan").textContent = "Keterangan wajib diisi.";
+        document.getElementById("err-keterangan").textContent = "Keterangan wajib diisi.";
         valid = false;
         }
 
@@ -70,8 +70,8 @@ if(formLayanan) {
         formLayanan.reset();
 
         setTimeout(() => {
-        successMsg.textContent = "";
-        }, 3000);
+            window.location.href = "table.html";
+        }, 1000);
 
     })
 }
